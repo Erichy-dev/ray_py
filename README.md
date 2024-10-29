@@ -46,9 +46,3 @@ You get what you pay for. Don't use the main-net RPC, just spend the money for H
 **How do I change the fee?** 
 
 Modify the UNIT_BUDGET and UNIT_PRICE in the constants.py. 
-
-### Contact
-
-My services are for **hire**. Contact me if you need help integrating the code into your own project. 
-
-Telegram: @AL_THE_BOT_FATHER

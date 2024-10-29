@@ -30,6 +30,7 @@ def buy(pair_address: str, sol_in: float = .01, slippage: int = 5) -> bool:
         
         print("Fetching pool keys...")
         pool_keys = fetch_pool_keys(pair_address)
+        print(f"found pool keys {pool_keys}")
 
         if pool_keys is None:
             print("No pool keys found...")
@@ -39,6 +40,8 @@ def buy(pair_address: str, sol_in: float = .01, slippage: int = 5) -> bool:
         
         amount_in = int(sol_in * SOL_DECIMAL)
         token_price, token_decimal = get_token_price(pool_keys)
+        print(f"Token price, {token_price}")
+
         amount_out = float(sol_in) / float(token_price)
         slippage_adjustment = 1 - (slippage / 100)
         amount_out_with_slippage = amount_out * slippage_adjustment
@@ -129,6 +132,7 @@ def buy(pair_address: str, sol_in: float = .01, slippage: int = 5) -> bool:
             [],
             client.get_latest_blockhash().value.blockhash,
         )
+        print(f"latest block hash{client.get_latest_blockhash().value.blockhash}")
 
         if wsol_account_keypair:
             txn = VersionedTransaction(compiled_message, [payer_keypair, wsol_account_keypair])
