@@ -4,8 +4,6 @@ This repo is for my python lovers who want to trade on Raydium. Only works for S
 
 Clone the repo, add Private Key (base58 string) and RPC url to the config.py.
 
-**If you can - please support my work and donate to: 3pPK76GL5ChVFBHND54UfBMtg36Bsh1mzbQPTbcK89PD**
-
 ### Examples
 
 ```
@@ -34,10 +32,6 @@ sell(pair_address, percentage, slippage)
 
 
 ### FAQS
-
-**What format should my private key be in?** 
-
-The private key should be in the base58 string format, not bytes. 
 
 **Why are my transactions being dropped?** 
 
